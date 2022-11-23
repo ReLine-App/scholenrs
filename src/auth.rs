@@ -16,7 +16,7 @@ pub fn get_token(username: &str, password: &str) -> ScholenResult<String> {
             ("password", password)
         ]) {
             Ok(resp) => resp,
-            Err(_) => return Err(ScholenError::ApplicationUnreachable)
+            Err(e) => return Err(ScholenError::ApplicationUnreachable(e.to_string()))
         };
     
     if let Some(location) = resp.header("Location") {

@@ -1,3 +1,4 @@
 pub mod auth;
-mod client;
+pub mod client;
+pub mod models;
 mod error;
