@@ -1,0 +1,1 @@
+pub const URL: &str = "https://www.scholen.net";
